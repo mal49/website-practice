@@ -1,0 +1,70 @@
+body {
+    font-family: Roboto;
+
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px auto auto auto;
+
+    z-index: 100;
+
+    grid-template-areas: 
+    "   Yheader   Yheader   Yheader   "
+    "   Aproject   Rworkexp   Aeducation   "
+    "   Aproject   Ropensc   Aeducation   "
+    "   Lreviews   Lreviews   Lreviews   "
+    ;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px repeat(7, auto) 100px 100px 250px auto;
+
+        grid-template-areas: 
+        "   Yheader   "
+        "   Aproject   "
+        "   Aproject   "
+        "   Aproject   "
+        "   Aproject   "
+        "   Aproject   "
+        "   Aproject   "
+        "   Rworkexp   "
+        "   Rworkexp   "
+        "   Ropensc   "
+        "   Aeducation   "
+        "   Lreviews   "
+        ;
+    }
+}
+
+.header {
+    grid-area: Yheader;
+}
+
+.project {
+    grid-area: Aproject;
+}
+
+.work-exp {
+    background-color: rebeccapurple;
+    grid-area: Rworkexp;
+}
+
+.opensc-work {
+    background-color: red;
+    grid-area: Ropensc;
+}
+
+.education {
+    background-color: aquamarine;
+    grid-area: Aeducation;
+}
+
+.reviews {
+    background-color: lightpink;
+    grid-area: Lreviews;
+}

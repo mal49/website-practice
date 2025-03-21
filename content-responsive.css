@@ -1,0 +1,12 @@
+@media only screen and (max-witdh: 767px) {
+    .fixed-head {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .left-head {
+        .name {
+            font-family: Borel;
+        }
+    }
+}
