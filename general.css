@@ -1,16 +1,26 @@
-body {
-    font-family: Roboto;
-
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px auto auto auto;
-
-    z-index: 100;
-
+    grid-template-rows: auto auto auto auto;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
     grid-template-areas: 
     "   Yheader   Yheader   Yheader   "
     "   Aproject   Rworkexp   Aeducation   "
@@ -22,17 +32,13 @@ body {
 @media screen and (max-width: 767px) {
     .container {
         grid-template-columns: 1fr;
-        grid-template-rows: 200px repeat(7, auto) 100px 100px 250px auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        gap: 15px;
+        padding: 15px;
 
         grid-template-areas: 
         "   Yheader   "
         "   Aproject   "
-        "   Aproject   "
-        "   Aproject   "
-        "   Aproject   "
-        "   Aproject   "
-        "   Aproject   "
-        "   Rworkexp   "
         "   Rworkexp   "
         "   Ropensc   "
         "   Aeducation   "
@@ -43,28 +49,112 @@ body {
 
 .header {
     grid-area: Yheader;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .project {
     grid-area: Aproject;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .work-exp {
-    background-color: rebeccapurple;
     grid-area: Rworkexp;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.work-exp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
 }
 
 .opensc-work {
-    background-color: red;
     grid-area: Ropensc;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.opensc-work:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(255, 107, 107, 0.3);
 }
 
 .education {
-    background-color: aquamarine;
     grid-area: Aeducation;
+    background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.education:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(78, 205, 196, 0.3);
 }
 
 .reviews {
-    background-color: lightpink;
     grid-area: Lreviews;
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    color: #2d3436;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.reviews:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(255, 234, 167, 0.3);
 }

@@ -1,12 +1,133 @@
-@media only screen and (max-witdh: 767px) {
-    .fixed-head {
-        display: flex;
-        flex-direction: column;
+@media only screen and (max-width: 767px) {
+    body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-attachment: fixed;
     }
     
-    .left-head {
-        .name {
-            font-family: Borel;
-        }
+    .container {
+        padding: 10px;
+        gap: 10px;
     }
+    
+    .header {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .fixed-head .name {
+        font-family: 'Borel', cursive;
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.2;
+    }
+    
+    .work-exp,
+    .opensc-work,
+    .education,
+    .reviews {
+        padding: 20px;
+        font-size: 16px;
+        min-height: 80px;
+    }
+    
+    .project {
+        order: 1;
+    }
+    
+    .work-exp {
+        order: 2;
+    }
+    
+    .opensc-work {
+        order: 3;
+    }
+    
+    .education {
+        order: 4;
+    }
+    
+    .reviews {
+        order: 5;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .middle-head .mid-title {
+        font-size: 24px;
+    }
+    
+    .middle-head .mid-subs {
+        font-size: 14px;
+    }
+    
+    .fixed-head .navigation-link {
+        gap: 10px;
+        font-size: 12px;
+    }
+    
+    .fixed-head .navigation-link li {
+        padding: 4px 8px;
+    }
+    
+    .project-head {
+        font-size: 20px;
+    }
+    
+    .work-exp,
+    .opensc-work,
+    .education,
+    .reviews {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+/* Smooth scrolling for better UX */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header,
+.project,
+.work-exp,
+.opensc-work,
+.education,
+.reviews {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.header {
+    animation-delay: 0.1s;
+}
+
+.project {
+    animation-delay: 0.2s;
+}
+
+.work-exp {
+    animation-delay: 0.3s;
+}
+
+.opensc-work {
+    animation-delay: 0.4s;
+}
+
+.education {
+    animation-delay: 0.5s;
+}
+
+.reviews {
+    animation-delay: 0.6s;
 }
